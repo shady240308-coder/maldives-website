@@ -18,11 +18,41 @@
             margin: 0;
             padding: 0;
         }
+        /* เปิดใช้งานการเลื่อนแบบสมูท */
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             font-family: 'Poppins', sans-serif;
             background-color: var(--bg-color);
             color: var(--text-color);
             line-height: 1.6;
+        }
+        /* แถบเมนูด้านบนแบบติดหน้าจอ (Sticky Navigation) */
+        nav {
+            position: sticky;
+            top: 0;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            padding: 12px 20px;
+            display: flex;
+            overflow-x: auto;
+            white-space: nowrap;
+            gap: 15px;
+        }
+        nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding: 6px 12px;
+            border-radius: 20px;
+            transition: background 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background: var(--secondary-color);
+            color: white;
         }
         header {
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
@@ -93,6 +123,22 @@
 </head>
 <body>
  
+    <!-- แถบเมนูด้านบน -->
+    <nav>
+        <a href="#sec1">001</a>
+        <a href="#sec2">002</a>
+        <a href="#sec3">003</a>
+        <a href="#sec4">004</a>
+        <a href="#sec5">005</a>
+        <a href="#sec6">006</a>
+        <a href="#sec7">007</a>
+        <a href="#sec8">008</a>
+        <a href="#sec9">009</a>
+        <a href="#sec10">010</a>
+        <a href="#sec11">011</a>
+        <a href="#sec12">012</a>
+    </nav>
+ 
     <header>
         <h1>Explore Maldives</h1>
         <p>Discover the tropical paradise nestled in the heart of the Indian Ocean.</p>
@@ -101,7 +147,7 @@
     <div class="container">
  
         <!-- 001 -->
-        <div class="section-card">
+        <div class="section-card" id="sec1">
             <h2>001. Maldives</h2>
             <p>Experience the enchanting beauty of the Maldives, an island paradise with pristine white beaches and crystal-clear waters.</p>
             <div class="video-container">
@@ -110,7 +156,7 @@
         </div>
  
         <!-- 002 -->
-        <div class="section-card">
+        <div class="section-card" id="sec2">
             <h2>002. Health and Wellness</h2>
             <p>Explore holistic health practices and tranquil wellness retreats surrounded by serene natural landscapes.</p>
             <div class="video-container">
@@ -119,7 +165,7 @@
         </div>
  
         <!-- 003 -->
-        <div class="section-card">
+        <div class="section-card" id="sec3">
             <h2>003. Political Leadership</h2>
             <p>Understand the governance structure, key leaders, and political leadership shaping the island nation.</p>
             <div class="video-container">
@@ -128,7 +174,7 @@
         </div>
  
         <!-- 004 -->
-        <div class="section-card">
+        <div class="section-card" id="sec4">
             <h2>004. Personality</h2>
             <p>Learn about the unique traits, warm hospitality, and friendly nature of the Maldivian people.</p>
             <div class="video-container">
@@ -137,7 +183,7 @@
         </div>
  
         <!-- 005 -->
-        <div class="section-card">
+        <div class="section-card" id="sec5">
             <h2>005. Cultural Festivals</h2>
             <p>Celebrate the vibrant traditions, colorful festivities, and rich cultural heritage of the Maldives.</p>
             <div class="video-container">
@@ -146,7 +192,7 @@
         </div>
  
         <!-- 006 -->
-        <div class="section-card">
+        <div class="section-card" id="sec6">
             <h2>006. Local Entertainment</h2>
             <p>Enjoy traditional music, rhythmic drumming, and authentic local entertainment that brings island culture to life.</p>
             <div class="video-container">
@@ -155,7 +201,7 @@
         </div>
  
         <!-- 007 -->
-        <div class="section-card">
+        <div class="section-card" id="sec7">
             <h2>007. Languages and Dialects</h2>
             <p>Discover Dhivehi, the official national language of the Maldives, alongside various island dialects and linguistic roots.</p>
             <div class="video-container">
@@ -164,7 +210,7 @@
         </div>
  
         <!-- 008 -->
-        <div class="section-card">
+        <div class="section-card" id="sec8">
             <h2>008. Traditional Sports</h2>
             <p>Explore traditional games, water sports, and time-honored athletic activities cherished across the islands.</p>
             <div class="video-container">
@@ -173,7 +219,7 @@
         </div>
  
         <!-- 009 -->
-        <div class="section-card">
+        <div class="section-card" id="sec9">
             <h2>009. Asian Beauty</h2>
             <p>Appreciate the natural grace, diverse identity, and distinct aesthetic beauty of the region.</p>
             <div class="video-container">
@@ -182,7 +228,7 @@
         </div>
  
         <!-- 010 -->
-        <div class="section-card">
+        <div class="section-card" id="sec10">
             <h2>010. Population</h2>
             <p>Examine demographic trends, community structures, and everyday life across the dispersed inhabited islands.</p>
             <div class="video-container">
@@ -191,7 +237,7 @@
         </div>
  
         <!-- 011 -->
-        <div class="section-card">
+        <div class="section-card" id="sec11">
             <h2>011. Communication</h2>
             <p>Understand how modern communications, digital networks, and traditional methods connect the archipelago.</p>
             <div class="video-container">
@@ -200,7 +246,7 @@
         </div>
  
         <!-- 012 -->
-        <div class="section-card">
+        <div class="section-card" id="sec12">
             <h2>012. Environment</h2>
             <p>Learn about the breathtaking marine ecosystems and crucial environmental conservation efforts in the Maldives.</p>
             <div class="video-container">
