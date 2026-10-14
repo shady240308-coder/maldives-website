@@ -18,7 +18,7 @@
             margin: 0;
             padding: 0;
         }
-        /* เปิดใช้งานการเลื่อนแบบสมูท */
+        /* Smooth scrolling */
         html {
             scroll-behavior: smooth;
         }
@@ -28,7 +28,7 @@
             color: var(--text-color);
             line-height: 1.6;
         }
-        /* แถบเมนูด้านบนแบบติดหน้าจอ (Sticky Navigation) */
+        /* Sticky Navigation Bar with Full Titles */
         nav {
             position: sticky;
             top: 0;
@@ -39,20 +39,32 @@
             display: flex;
             overflow-x: auto;
             white-space: nowrap;
-            gap: 15px;
+            gap: 10px;
+        }
+        /* Custom Scrollbar for Nav */
+        nav::-webkit-scrollbar {
+            height: 4px;
+        }
+        nav::-webkit-scrollbar-thumb {
+            background: var(--secondary-color);
+            border-radius: 4px;
         }
         nav a {
             color: var(--primary-color);
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 600;
-            padding: 6px 12px;
+            padding: 8px 16px;
+            background: #f0f8ff;
+            border: 1px solid var(--accent-color);
             border-radius: 20px;
-            transition: background 0.3s, color 0.3s;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
         }
         nav a:hover {
-            background: var(--secondary-color);
+            background: var(--primary-color);
             color: white;
+            border-color: var(--primary-color);
         }
         header {
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
@@ -80,6 +92,7 @@
             margin-bottom: 30px;
             padding: 30px;
             transition: transform 0.3s ease;
+            scroll-margin-top: 70px; /* Offset for sticky nav */
         }
         .section-card:hover {
             transform: translateY(-5px);
@@ -123,20 +136,20 @@
 </head>
 <body>
  
-    <!-- แถบเมนูด้านบน -->
+    <!-- แถบเมนูด้านบนพร้อมชื่อหัวข้อเต็ม -->
     <nav>
-        <a href="#sec1">001</a>
-        <a href="#sec2">002</a>
-        <a href="#sec3">003</a>
-        <a href="#sec4">004</a>
-        <a href="#sec5">005</a>
-        <a href="#sec6">006</a>
-        <a href="#sec7">007</a>
-        <a href="#sec8">008</a>
-        <a href="#sec9">009</a>
-        <a href="#sec10">010</a>
-        <a href="#sec11">011</a>
-        <a href="#sec12">012</a>
+        <a href="#sec1">001. Maldives</a>
+        <a href="#sec2">002. Health & Wellness</a>
+        <a href="#sec3">003. Politics</a>
+        <a href="#sec4">004. Personality</a>
+        <a href="#sec5">005. Festivals</a>
+        <a href="#sec6">006. Entertainment</a>
+        <a href="#sec7">007. Languages</a>
+        <a href="#sec8">008. Sports</a>
+        <a href="#sec9">009. Asian Beauty</a>
+        <a href="#sec10">010. Population</a>
+        <a href="#sec11">011. Communication</a>
+        <a href="#sec12">012. Environment</a>
     </nav>
  
     <header>
